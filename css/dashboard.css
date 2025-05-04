@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* 
+#80CBC4  primary
+#B4EBE6  primary 2
+#FBF8EF  seconddary
+#FFB433  optional
+
+Rekomendasi warna lebih tua dari #80CBC4:
+#4DB6AC – Versi satu tingkat lebih tua, masih lembut.
+#26A69A – Lebih gelap lagi, dengan kesan lebih kuat.
+#00897B – Jauh lebih tua, mendekati warna teal gelap.
+#00695C – Sangat gelap, cocok untuk aksen atau latar belakang kontras tinggi.
+*/
+:root {
+    --primary1: #80CBC4;
+    --primary2: #00897B;
+    --secondary1: #FFFFFF;
+    --secondary2: #E8E8E8;
+    --third: #00695C;
+    --fontblack: #0B132A;
+    --fontgrey: #4F5665;
+    --fontwhite: #FFFFFF;
+    --fontgreen: #00A700;
+    --fontred: #D00000;
+
+    }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #80CBC4;
+    text-transform: capitalize;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: blue; */
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+header {
+    /* position: relative; */
+    background-color: var(--secondary1);
+    width: 100%;
+    height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--secondary2);
+    padding-left: 40px;
+    padding-right: 80px;
+    gap: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Nunito Sans;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--primary2);
+}
+
+.logo img {
+    height: 32px;
+    width: 32px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user #user-account {
+    line-height: 24px;
+    letter-spacing: -0.6%;
+}
+
+.user img {
+    width: 48px;
+    height: 48px;
+}
+
+.user button {
+    background-color: transparent;
+    background-image: url('../img/user-down-24.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    height: 24px;
+    width: 24px;
+    border: none;
+}
+
+
+main {
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: var(--secondary2);
+    height: 100%;
+    width: 100%;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary1);
+    width: 262px;
+    height: 100%;
+    top: 76px;
+    left: -1px;
+    gap: 15px;
+    padding-top: 24px;
+    padding-right: 14px;
+    padding-bottom: 24px;
+    padding-left: 42px;
+    border-right: 1px solid var(--secondary2);
+
+}
+
+.menu {
+    height: 100%;
+    width: 100%;
+    /* background-color: var(--primary2); */
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    gap: 10px;
+}
+
+li {
+    border-radius: 6px;
+}
+
+.main-menu {
+    background-color: var(--primary2);
+}
+
+ul a {
+    display: flex;
+    gap: 10px;
+    text-transform: capitalize;
+    color: var(--fontgrey);
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    text-decoration: none;
+    width: 100%;
+    border-radius: 6px;
+    padding: 10px 60px 10px 20px;
+    /* height: 100%; */
+    /* padding: 4px 12px 4px 8px; */
+    /* padding-left: 0px; */
+}
+
+li img {
+    height: 24px;
+    width: 24px;
+}
+
+.main-menu a {
+    color: var(--secondary1);
+    /* background-color:antiquewhite; */
+    /* padding: 20px; */
+    width: 100%;
+}
+li a:hover {
+    background-color: var(--primary2);
+    color: var(--secondary2);
+}
+
+#logo-name {
+    text-transform: capitalize;
+}
+
+.content {
+    /* border-left: 1px solid var(--secondary2); */
+    background-color: var(--secondary1);
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 48px;
+    padding-right: 86px;
+    gap: 24px;
+}
+
+.left-content {
+    height: 100%;
+    flex: 2;
+    color: var(--fontblack);
+}
+
+
+.box-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 24px;
+}
+
+.box-left-up {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    flex: 1.5;
+    gap: 24px;
+}
+
+.card-finance {
+    border: 1px solid var(--secondary2);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 10px;
+    text-transform: capitalize;
+    padding: 20px;
+}
+
+.box-finance {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.box-finance > div:first-child > img {
+    height: 24px;
+    width: 24px;
+}
+
+.box-finance > div:first-child, .box-finance > div:last-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.box-finance > div:nth-child(2) {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.box-finance > div:last-child {
+    color: var(--fontgreen);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.box-finance > div:last-child > img {
+    height: 16px;
+    width: 16px;
+}
+
+.box-finance > div:last-child > .expense {
+    color: var(--fontred);
+}
+
+.box-left-middle {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    flex: 0.9;
+}
+.service {
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--secondary2);
+    flex: 1;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.service-name {
+    flex: 1;
+}
+
+.service-name span {
+    font-size: 16px;
+    font-weight: 600;
+}
+.service-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 24px;
+}
+
+.service-button button{
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border: none;
+    gap:5px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary2);
+    color: var(--secondary1);
+}
+
+.service-button button img {
+    height: 24px;
+    width: 24px;
+}
+
+.service-button .btn-img-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.chart {
+    border: 1px solid var(--secondary2);
+    flex: 1;
+}
+
+.box-left-down {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex: 5;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    height: 100%;
+    width: 100%;
+}
+.chart-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.chart-data {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex: 1;
+}
+
+.chart-title-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.chart-title-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+
+}
+
+.chart-title-button button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 15px;
+    /* height: 35px; */
+    border: none;
+    gap: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.chart-title-button button img {
+    height: 16px;
+    width: 16px;
+}
+
+.chart-data img {
+    width: 100%;
+    height: 470px;
+    /* border: 1px solid var(--primary1); */
+}
+
+.right-content {
+    height: 100%;
+    /* border: 1px solid var(--secondary2); */
+    flex: 1;
+}
+.box-right {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--secondary2);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+}
+
+.box-right-up {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid var(--secondary2); */
+    width: 100%;
+}
+
+.transaction-history {
+    font-size: 18px;
+    font-weight: 600;
+}
+.see-all {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--primary2);
+    width: 50px;
+}
+
+.transaction {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+}
+
+.transaction-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transaction-image img {
+    height: 56px;
+    width: 56px;
+    border-radius: 6px;
+}
+
+.transaction-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    width: 100px;
+    font-size: 16px;
+    gap: 10px;
+    /* border: 1px solid var(--secondary2); */
+
+}
+
+.transaction-name span:first-child {
+    font-weight: 600;
+}
+
+
+.box-right-down {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* border: 1px solid var(--secondary2); */
+    gap: 30px;
+}
+
+.transaction-amount {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 600;
+}
+
+.transfer {
+    color: var(--fontgreen);
+}
+
+.send {
+    color: var(--fontred);
+}
+
+
+
+
+

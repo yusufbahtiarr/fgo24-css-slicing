@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <section class="logo">
+                <img src="../img/wallet-small.png" alt="Ewallet">
+                <span id="logo-name">e-wallet</span>
+            </section>
+            <section class="user">
+                <span id="user-account">Galih  Wizard</span>
+                <img src="../img/user-48.png" alt="user">
+                <button class="btn-user"></button>
+            </section>
+        </header>
+        <main>
+            <aside>
+                <div class="menu">
+                    <ul>
+                        <li class="main-menu">
+                            <a href="#"><img src="../img/dashboard-24.png" alt="dashboard">dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="../img/transfer-24.png" alt="dashboard">
+                                transfer</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="../img/history-24.png" alt="dashboard">
+                            history</a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                            <img src="../img/topup-24.png" alt="dashboard">top up</a></li>
+                        <li>
+                            <a href="#">
+                            <img src="../img/profile-24.png" alt="dashboard">
+                            profile</a></li>
+                        <li>
+                            <a href="#">
+                            <img src="../img/keluar-24.png" alt="dashboard">keluar</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="content">
+                <div class="left-content">
+                    <div class="box-left">
+                        <div class="box-left-up">
+                            <div class="card-finance">
+                                <div class="box-finance">
+                                    <div>
+                                        <img src="../img/balance-24.png" alt="balance">
+                                        <span>balance</span>
+                                    </div>
+                                    <div>
+                                        <span>Rp.120.000</span>
+                                    </div>
+                                    <div>
+                                        <span>+2%</span>
+                                        <img src="../img/up-16.png" alt="up"> 
+                                        <span>3 Days Ago</span>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="card-finance">
+                                <div class="box-finance">
+                                    <div>
+                                        <img src="../img/income-24.png" alt="income">
+                                        <span>income</span>
+                                    </div>
+                                    <div>
+                                        <span>rp.2.120.000</span>
+                                    </div>
+                                    <div>
+                                        <span>+11.01% </span>
+                                        <img src="../img/up-16.png" alt="up">
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="card-finance">
+                                <div class="box-finance">
+                                    <div>
+                                        <img src="../img/expence-24.png" alt="expence">
+                                        <span>expense</span>
+                                    </div>
+                                    <div>
+                                        <span>Rp.120.000</span>
+                                    </div>
+                                    <div>
+                                        <span class="expense">-5.06%</span>
+                                        <img src="../img/down-16.png" alt="down">
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="box-left-middle">
+                            <div class="service">
+                                <div class="service-name">
+                                    <span>fast service</span>
+                                </div>
+                                <div class="service-button">
+                                    <button type="submit" id="btn-topup">
+                                        <img src="../img/topup-white-24.png" alt="transfer">
+                                        top up
+                                    </button>
+                                    <button type="submit" id="btn-transfer">
+                                        <img src="../img/transfer-white.24.png" alt="transfer">
+                                        transfer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-left-down">
+                            <div class="chart">
+                                <div class="chart-title">
+                                    <div class="chart-title-name">
+                                        <span>income chart</span>
+                                    </div>
+                                    <div class="chart-title-button">
+                                        <button type="submit" id="btn-days">
+                                            7 days
+                                            <img src="../img/user-down-24.png" alt="days">
+                                        </button>
+                                        <button type="submit" id="bnt-income">
+                                            income
+                                            <img src="../img/user-down-24.png" alt="income">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="chart-data">
+                                    <img src="../img/chart.png" alt="chart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="box-right">
+                        <div class="box-right-up">
+                            <span class="transaction-history">transaction history</span>
+                            <span class="see-all">see all</span>
+                        </div>
+                        <div class="box-right-down">
+                            <div class="transaction">
+                                <div class="transaction-image">
+                                    <img src="../img/person1-56.png" alt="image-transaction">
+                                </div>
+                                <div class="transaction-name">
+                                    <span>robert fox</span>
+                                    <span>transfer</span>
+                                </div>
+                                <div class="transaction-amount">
+                                    <span class="transfer">+Rp50.000</span>
+                                </div>
+                            </div>
+                            <div class="transaction">
+                                <div class="transaction-image">
+                                    <img src="../img/person2-56.png" alt="image-transaction">
+                                </div>
+                                <div class="transaction-name">
+                                    <span>floyd miles</span>
+                                    <span>send</span>
+                                </div>
+                                <div class="transaction-amount">
+                                    <span class="send">+Rp50.000</span>
+                                </div>
+                            </div>
+                            <div class="transaction">
+                                <div class="transaction-image">
+                                    <img src="../img/person3-56.png" alt="image-transaction">
+                                </div>
+                                <div class="transaction-name">
+                                    <span>ujang</span>
+                                    <span>send</span>
+                                </div>
+                                <div class="transaction-amount">
+                                    <span class="send">+Rp50.000</span>
+                                </div>
+                            </div>
+                            <div class="transaction">
+                                <div class="transaction-image">
+                                    <img src="../img/person4-56.png" alt="image-transaction">
+                                </div>
+                                <div class="transaction-name">
+                                    <span>raulemons</span>
+                                    <span>transfer</span>
+                                </div>
+                                <div class="transaction-amount">
+                                    <span class="transfer">+Rp50.000</span>
+                                </div>
+                            </div>
+                            <div class="transaction">
+                                <div class="transaction-image">
+                                    <img src="../img/person5-56.png" alt="image-transaction">
+                                </div>
+                                <div class="transaction-name">
+                                    <span>reiva</span>
+                                    <span>transfer</span>
+                                </div>
+                                <div class="transaction-amount">
+                                    <span class="transfer">+Rp50.000</span>
+                                </div>
+                            </div>
+                            <div class="transaction">
+                                <div class="transaction-image">
+                                    <img src="../img/person6-56.png" alt="image-transaction">
+                                </div>
+                                <div class="transaction-name">
+                                    <span>thobie</span>
+                                    <span>send</span>
+                                </div>
+                                <div class="transaction-amount">
+                                    <span class="send">+Rp50.000</span>
+                                </div>
+                            </div>
+                            <div class="transaction">
+                                <div class="transaction-image">
+                                    <img src="../img/person7-56.png" alt="image-transaction">
+                                </div>
+                                <div class="transaction-name">
+                                    <span>buzjany</span>
+                                    <span>transfer</span>
+                                </div>
+                                <div class="transaction-amount">
+                                    <span class="transfer">+Rp50.000</span>
+                                </div>
+                            </div>
+                            <div class="transaction">
+                                <div class="transaction-image">
+                                    <img src="../img/person8-56.png" alt="image-transaction">
+                                </div>
+                                <div class="transaction-name">
+                                    <span>adisurya</span>
+                                    <span>send</span>
+                                </div>
+                                <div class="transaction-amount">
+                                    <span class="send">+Rp50.000</span>
+                                </div>
+                            </div>
+                            <div class="transaction">
+                                <div class="transaction-image">
+                                    <img src="../img/person9-56.png" alt="image-transaction">
+                                </div>
+                                <div class="transaction-name">
+                                    <span>miguelle</span>
+                                    <span>transfer</span>
+                                </div>
+                                <div class="transaction-amount">
+                                    <span class="transfer">+Rp50.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
