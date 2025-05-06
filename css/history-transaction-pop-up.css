@@ -307,6 +307,10 @@ li a:hover {
     padding-bottom: 10px;
 }
 
+.content-front > div > .layout-register > div > .amount {
+    color: var(--fontred);
+}
+
 .layout-register > div > hr {
     border: 1px solid var(--secondary2);
     margin-top: 10px;
