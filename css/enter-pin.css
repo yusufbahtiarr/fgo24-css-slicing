@@ -235,7 +235,13 @@ button img {
         gap: 20px;
         justify-content: space-between;
     }
-    .input-box {
+    .layout-register > .input-box {
+        display: flex;
         gap: 15px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .form-input-pin {
+        width: 60px;
     }
 }
