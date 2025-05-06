@@ -602,6 +602,33 @@ li a:hover {
         display: none;
     }
 
+    .content  {
+        padding: 0;
+        gap: 100px;
+    }
+
+    .content-up {
+        padding: 20px 40px;
+        background-color: var(--primary2);
+        color: var(--secondary1);
+        
+    }
+    .content-up > img {
+        display: none;
+    }
+
+    .content-up > span {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -0.6%;
+        padding: 0;
+    }
+
+    .content-down {
+        border: none;
+    }
     
 }   
 

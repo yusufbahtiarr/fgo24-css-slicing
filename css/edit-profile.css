@@ -214,6 +214,7 @@ li a:hover {
   align-items: center;
   justify-content: flex-start;
   gap: 17px;
+
 }
 
 .content-up-2 {
@@ -620,7 +621,31 @@ li a:hover {
         font-weight: 500;
         margin-bottom: 20px;
     }
-    
+    .content  {
+        padding: 0;
+        gap: 0;
+    }
+    .content-up {
+        padding: 20px 40px;
+        background-color: var(--primary2);
+        color: var(--secondary1);
+        
+    }
+    .content-up > img {
+        display: none;
+    }
+
+    .content-up > span {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -0.6%;
+        padding: 0;
+    }
+    .content-down {
+        border: none;
+    }
 }
 
 
