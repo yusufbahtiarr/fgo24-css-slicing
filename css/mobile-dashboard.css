@@ -1,0 +1,154 @@
+@media (max-width: 768px) {
+  main {
+      flex-direction: column-reverse;
+      height: 100%;
+
+  }
+
+  .content {
+      padding-right: 30px;
+      flex-direction: column;
+      height: auto;
+      min-height: 100vh;
+  }
+
+ 
+  aside {
+      position: static;
+      width: 100%;
+      /* bottom: 0;
+      left: 0; */
+      /* height: 100px; */
+      /* margin: 0 auto; */
+      /* width: 100%; */
+      background-color: #fff; /* atau warna sesuai tema */
+      border-top: 1px solid #ccc;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 0;
+      /* z-index: 999; */
+  }
+  .menu, .menu > ul, .menu > ul > li {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0;  
+      margin: 0;  
+      width: 100%;
+      box-sizing: border-box;    
+  }
+
+  .menu > ul {
+      padding: 0;
+      margin: 0;
+      gap: 0;
+      height: 100%;
+  }
+
+  .menu > ul > li {
+      /* flex: 1; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      height: 100%;
+  }
+
+  .main-menu > a {
+      background-color: var(--secondary1);
+      color: var(--primary2);
+  }
+
+  .menu > ul > li a {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      height: 100%;
+  }
+
+  .menu > ul > li > img {
+      /* flex: 1; */
+      display: flex;
+      flex-direction: row;
+  }
+
+
+  .menu > ul > li:last-child {
+      display: none;
+  }
+  header {
+      /* position: relative; */
+      min-height: 150px;
+      padding: 0;
+      /* display: none; */
+      /* min-height: 100%; */
+  }
+
+  .btn-user, .logo {
+      display: none;
+  }
+
+  .user {
+      flex-direction: row-reverse;
+  }
+  li > a > .image-mobile {
+      display: flex;
+  }
+  li > a > .image-desktop {
+      display: none;
+  }
+
+  .data-history > span {
+      /* gap: 40px; */
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 20px;
+  }
+  .content  {
+      padding: 0;
+      gap: 0;
+      /* position: relative; */
+  }
+  .content-up {
+      padding: 20px 40px;
+      background-color: var(--primary2);
+      color: var(--secondary1);
+      
+  }
+  .content-up > img {
+      display: none;
+  }
+
+  .content-up > span {
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.6%;
+      padding: 0;
+  }
+  .content-down {
+      border: none;
+  }
+  .desktop {
+      display: none;
+  }
+  .mobile {
+      display: flex;
+  }
+
+  footer {
+      /* position: relative; */
+      height: 100%;
+      width: 100%;
+  }
+
+  .service-name {
+      display: none;
+  }
+  .service-button {
+      justify-content: space-between;
+  }
+}
