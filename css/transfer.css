@@ -222,8 +222,8 @@ li img {
     width: 100%;
 }
 li a:hover {
-    background-color: var(--primary2);
-    color: var(--secondary2);
+    /* background-color: var(--primary2); */
+    color: var(--primary2);
 }
 
 #logo-name {
