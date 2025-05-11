@@ -16,11 +16,13 @@
       </div>
       <div class="header-right">
         <div class="header-toggle">
-          <img src="./img/Group.png" alt="groups" class="mobile">
+          <button onclick="toggleMenu()" id="btn-toggle">
+            <img src="./img/Group.png" alt="groups" class="mobile">
+          </button>
         </div>
         <div class="header-button">
-          <button class="desktop">sing in</button>
-          <button class="desktop">sing out</button>
+          <button class="desktop" onclick="window.location.href='./pages/login.html'">sing in</a></button>
+          <button class="desktop" onclick="window.location.href='./pages/register.html'">sing up</a></button>
         </div>
     </div>
 
@@ -121,7 +123,7 @@
         <p>We always do our best for our customers to stay comfortable using the applications we provide</p>
       </section>
       <section class="content-testimony">
-        <img src="./img/arrow-left.png" alt="arrow-left">
+        <button id="btn-left"><img src="./img/arrow-left.png" alt="arrow-left"></button>
         <div class="card-testimony">
           <img src="./img/testi1.png" alt="testi1">
           <span>Sherina Claw</span>
@@ -130,7 +132,7 @@
           <p>“I use this app since 2 years ago and this is the best app that I’ve ever use in my entire life”</p>
         </div>
         <div class="card-testimony">
-          <img src="./img/testi1.png" alt="testi2">
+          <img src="./img/person6-56.png" alt="testi2">
           <span>James Bond</span>
           <img src="./img/rating.png" alt="rating2">
           <span class="sign">“</span>
@@ -144,7 +146,7 @@
           <p>“Since I’m using this app, I’m not going to move to another similar app. Thank you Zwallet!”</p>
         </div>
         <img src="./img/Group 1300 (1).png" alt="group1" class="mobile">
-        <img src="./img/arrow-right.png" alt="arrow-right">
+        <button id="btn-right"><img src="./img/arrow-right.png" alt="arrow-right"></button>
       </section>
     </main>
 
@@ -179,8 +181,9 @@
         </div>
         <div class="box-footer">
           <span>NEWSLETTER</span>
-          <input type="email" name="email" placeholder="Enter Your Email">
-          <button type="submit">Subscribe</button>
+          <input type="email" name="newsletter" placeholder="Enter Your Email" id="newsletter" pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/" autocomplete="off">
+          <button type="button" onclick="subscribe()" id="btn-subscribe">Subscribe</button>
+          <span id="notifNewsletter"></span>
         </div>
       </div>
       <div class="footer-down">
@@ -189,5 +192,6 @@
       </div>
     </footer>
   </div>
+  <script src="./js/index.js"></script>
 </body>
 </html>

@@ -94,6 +94,7 @@ header {
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
+  cursor: pointer;
 }
 
 .header-button > button {
@@ -442,7 +443,16 @@ main {
   background-color: var(--secondary2);
   padding: 60px 40px;
 }
+.content-testimony > button {
+  background-color: unset;
+  border: unset;
+}
 
+.card-testimony > img:first-child {
+  height: 59px;
+  width: 59px;
+  border-radius: 50%;
+}
 
 footer {
   flex: 1;
@@ -561,6 +571,10 @@ footer {
   letter-spacing: 0.75px;
 }
 
+
+.box-footer > input:focus {
+  outline: unset;
+}
 .box-footer button {
   width: 275px;
   /* height: 36px; */
@@ -746,7 +760,7 @@ footer {
     font-size: 18px;
   }
 
-  .content-testimony > img:first-child, .content-testimony > img:last-child {
+  .content-testimony > button:first-child, .content-testimony > button:last-child {
     display: none;
   }
   .card-testimony:nth-of-type(2),
@@ -754,9 +768,17 @@ footer {
     display: none;
   }
 
+  .card-testimony {
+    min-width: 33.33%; /* show 3 at once on desktop if desired */
+  }
+
   .box-footer, .box-footer > input, .box-footer > button {
     width: 100%;
   } 
+  
+  .box-footer > button {
+    cursor: pointer;
+  }
 
   footer {
     gap: 30px;
@@ -778,7 +800,13 @@ footer {
     /* width: 24px; */
   }
 
-  .header-toggle > img {
+  .header-toggle > button {
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+  }
+
+  .header-toggle > button > img {
     height: 24px;
     width: 24px;
   }
@@ -832,19 +860,20 @@ footer {
     padding: 12px 18px;
     gap: 6px;
     border-radius: 5px;
+    cursor: pointer;
   }
 
   .header-button > button:first-child {
     background-color: var(--secondary1);
     color: var(--primary2)
   }
-  .header-button > button:last-child {
+  .header-button > button:hover {
     border: 1px solid var(--primary2)
     ;
   }
 
-  .header-right:hover .header-button {
-    display: flex;
+  .header-button.show {
+    display: flex; 
   }
 }
 
