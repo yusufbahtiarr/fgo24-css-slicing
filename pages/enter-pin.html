@@ -21,14 +21,14 @@
                     <p>Please save your pin because this so important.</p>
                 </div>
                
-                
+                <form id="formPin">
                 <div class="input-box">
-                    <input class="form-input-pin" type="text" name="firstNumber" id="firstNumber" size="1" maxlength="1">
-                    <input class="form-input-pin" type="text" name="secondNumber" id="secondNumber" size="1" maxlength="1">
-                    <input class="form-input-pin" type="text" name="thirdNumber" id="thirdNumber" size="1" maxlength="1">
-                    <input class="form-input-pin" type="text" name="fourthNumber" id="fourthNumber" size="1" maxlength="1">
-                    <input class="form-input-pin" type="text" name="fifthNumber" id="fifthNumber" size="1" maxlength="1">
-                    <input class="form-input-pin" type="text" name="sixthNumber" id="sixthNumber" size="1" maxlength="1">
+                    <input class="form-input-pin" name="firstNumber" id="firstNumber" type="text" pattern="^\d{0,1}$" inputmode="numeric" maxlength="1" required>
+                    <input class="form-input-pin" name="secondNumber" id="secondNumber" type="text" pattern="^\d{0,1}$" inputmode="numeric" maxlength="1" required>
+                    <input class="form-input-pin" name="thirdNumber" id="thirdNumber" type="text" pattern="^\d{0,1}$" inputmode="numeric" maxlength="1" required>
+                    <input class="form-input-pin" name="fourthNumber" id="fourthNumber" type="text" pattern="^\d{0,1}$" inputmode="numeric" maxlength="1" required>
+                    <input class="form-input-pin" name="fifthNumber" id="fifthNumber" type="text" pattern="^\d{0,1}$" inputmode="numeric" maxlength="1" required>
+                    <input class="form-input-pin" name="sixthNumber" id="sixthNumber" type="text" pattern="^\d{0,1}$" inputmode="numeric" maxlength="1" required>
                 </div>
                 <div class="button">
                     <button class="btn-primary" type="submit">submit</button>
@@ -36,6 +36,7 @@
                 <div class="have-account">
                     <span class="text-info">forgot your pin?  <span class="span-login">reset</span></span>
                 </div>
+                </form>
             </div>
         </div>
 
@@ -43,5 +44,6 @@
             <img src="../img/enter-pin.png" alt="wallet-large">
         </div>
     </div>
+    <script src="../js/enter-pin.js"></script>
 </body>
 </html>
