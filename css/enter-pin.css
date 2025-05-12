@@ -142,6 +142,10 @@ body {
     background-color: #ffffff;
 }
 
+.btn-primary:hover {
+    cursor: pointer;
+}
+
 .input-box {
     display: flex;
     flex-direction: row;
