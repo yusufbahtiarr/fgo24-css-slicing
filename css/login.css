@@ -115,6 +115,7 @@ body {
     color:#FFFFFF;
     border: 1px solid #FBF8EF;
     font-size: 16px;
+    cursor: pointer;
 }
 .btn-secondary {
     font-weight: 500;
@@ -129,6 +130,10 @@ body {
     background-color: #ffffff;
 }
 
+input:focus{
+    outline: unset;
+}
+
 .input-box {
     display: flex;
     flex-direction: column;
@@ -136,6 +141,7 @@ body {
     gap: 13px;
     font-weight: 500;
     margin-bottom: 13px;
+    position: relative;
 }
 
 .form-input {
@@ -163,6 +169,13 @@ body {
     padding-left: 36px;
 }
 
+#infoValidation {
+    display: inline-block;
+    padding-top: 10px;
+    color: red;
+
+}
+
 .title-register, #ewallet, .btn-secondary,.btn-primary, .input-box, .text-info{
     text-transform: capitalize;
 }
@@ -186,6 +199,24 @@ button img {
     width: 24px;
     height: 24px;
 }
+
+.input-box > button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 16px;
+    width: 16px;
+    background-color: unset;
+    border: unset;
+    z-index: 20;
+}
+
+#passwordHidden, #passwordConfirmHidden {
+    background-image: url('../img/password-hidden.png');
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
 
 @media (max-width : 768px) {
     .container {

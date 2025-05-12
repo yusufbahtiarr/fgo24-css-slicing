@@ -21,7 +21,6 @@
                     <p>Fill out the form correctly or you can login with several option.</p>
                 </div>
                 <div class="button">
-                    
                     <button class="btn-secondary" type="submit">
                         <img src="../img/google.png" alt="google">
                         sign in with google
@@ -31,15 +30,15 @@
                         sign in with facebook
                     </button>
                 </div>
+                <form id="formLogin">
                 <div class="input-box">
                     <span class="input-register">email</span>
                     <input class="form-input" type="email" name="email" id="email" placeholder="Enter Your Email">
-                    <!-- <img src="./img/email.png" alt="email"> -->
                 </div>
                 <div class="input-box">
                     <span class="input-register">password</span>
                     <input class="form-input" type="password" name="password" id="password" placeholder="Enter Your Password">
-                    <!-- <img src="./img/password.png" alt="password"> -->
+                    <button type="button" id="passwordHidden" tabindex="-1"></button>
                 </div>
                 <div class="button">
                     <button class="btn-primary" type="submit">register</button>
@@ -47,6 +46,8 @@
                 <div class="have-account">
                     <span class="text-info">Not Have An Account?  <span class="span-login">Register</span></span>
                 </div>
+                <span id="infoValidation"></span>
+                </form>
             </div>
         </div>
 
@@ -54,5 +55,6 @@
             <img src="../img/login.png" alt="wallet-large">
         </div>
     </div>
+    <script src="../js/login.js"></script>
 </body>
 </html>
