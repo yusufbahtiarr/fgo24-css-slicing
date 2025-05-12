@@ -24,29 +24,29 @@
                 <div class="menu">
                     <ul>
                         <li>
-                            <a href="#"><img src="../img/dashboard.png" alt="dashboard">dashboard</a>
+                            <a href="../pages/dashboard.html"><img src="../img/dashboard.png" alt="dashboard">dashboard</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="../pages/transfer.html">
                             <img src="../img/transfer-24.png" alt="dashboard">
                                 transfer</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="../pages/history-transaction.html">
                             <img src="../img/history.png" alt="dashboard">
                             history</a>
                         </li>
   
                           <li>
-                              <a href="#">
+                              <a href="../pages/top-up.html">
                               <img src="../img/topup-24.png" alt="dashboard">top up</a></li>
                           <li class="main-menu">
-                              <a href="#">
+                              <a href="../pages/edit-profile.html">
                               <img src="../img/profile-24.png" alt="dashboard" class="image-desktop">
                               <img src="../img/profile-blue.png" alt="dashboard" class="image-mobile">
                               profile</a></li>
                         <li>
-                            <a href="#">
+                            <a href="../index.html">
                             <img src="../img/keluar-24.png" alt="dashboard">keluar</a></li>
                     </ul>
                 </div>
@@ -70,25 +70,29 @@
                         </div>
                         <p>The profile picture must be 512 x 512 pixels or less</p>
                     </div>
-                    <div>
-                      <span>Full Name</span>
-                      <input class="btn-input" type="text" name="amount" placeholder="Ghaluh Wizard Anggoro">
-                      <span>Phone</span>
-                      <input class="btn-input" type="text" name="amount" placeholder="6282116304337">
-                      <span>Email</span>
-                      <input class="btn-input" type="text" name="amount" placeholder="ghaluhwizz@gmail.com">
-                      <span>Password</span>
-                      <span><a href="#">Change Password</a></span>
-                      <span>Pin </span>
-                      <span><a href="#">Change Pin  </a></span>
-                    </div>
-                    <button>Submit</button>
-                  </div>
+                    <form id="formEditProfile">
+                        <div>
+                        <span>Full Name</span>
+                        <input class="btn-input" type="text" name="name" placeholder="Enter your full name" required>
+                        <span>Phone</span>
+                        <input class="btn-input" type="tel" name="telephone" placeholder="Enter your telephone" required>
+                        <span>Email</span>
+                        <input class="btn-input" type="email" name="email" placeholder="Enter your email" required>
+                        <span>Password</span>
+                        <span><a href="change-password.html">Change Password</a></span>
+                        <span>Pin</span>
+                        <span><a href="change-pin.html">Change Pin</a></span>
+                        </div>
+                        <button type="submit">Submit</button>
+                        <span id="infoValidation"></span>
+                    </form>
                 </div>
+            </div>
                 </div>
               </div>
             </section>
         </main>
     </div>
+    <script src="../js/edit-profile.js"></script>
 </body>
 </html>

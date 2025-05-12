@@ -381,7 +381,11 @@ li a:hover {
     vertical-align: top;
 }
 
-.data-history > div > .btn-input {
+input, button {
+    outline: unset;
+}
+
+.data-history > form > div > .btn-input {
     border-radius: 6px;
     padding: 20px;
     padding-left: 40px;
@@ -399,29 +403,13 @@ li a:hover {
     font-size: 16px;
 }
 
-.data-history > textarea {
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 16px;
-    border-radius: 6px;
-    padding: 10px;
-    height: 280px;
-    border: 1px solid var(--secondary2);
-}
-
-.data-history > textarea::placeholder {
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 16px;  
-}
-
-.data-history > div {
+.data-history > form > div {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.data-history > div > span {
+.data-history > form > div > span {
     font-family: Montserrat;
     font-weight: 500;
     font-size: 16px;
@@ -432,7 +420,7 @@ li a:hover {
     
 }
 
-.data-history > button {
+.data-history > form > button {
     font-family: Montserrat;
     font-weight: 400;
     font-size: 14px;
@@ -441,6 +429,19 @@ li a:hover {
     color: var(--secondary1);
     background-color: var(--primary2);
     padding: 12px;
+    cursor: pointer;
+}
+
+#formEditProfile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+#infoValidation {
+    color: var(--primary2);
+    font-weight: 500;
 }
 
 .data-history > div > p {
@@ -502,7 +503,7 @@ li a:hover {
     border: 1px solid var(--fontred);
 }
 
-.data-history > div > span > a {
+.data-history > form > div > span > a {
     text-decoration: none;
     color: var(--primary2);
 }
