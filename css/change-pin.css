@@ -434,7 +434,7 @@ li a:hover {
     
 }
 
-.data-history > button {
+.data-history > form > button {
     font-family: Montserrat;
     font-weight: 400;
     font-size: 14px;
@@ -443,9 +443,20 @@ li a:hover {
     color: var(--secondary1);
     background-color: var(--primary2);
     padding: 12px;
+    cursor: pointer;
 }
 
+input {
+    outline: unset;
+}
 
+input:focus {
+    border-bottom:3px solid #00695C;
+}
+
+#infoValidation {
+    color: green;
+}
 
 
 .content-down > span {
@@ -487,7 +498,7 @@ li a:hover {
 
 }
 
-.data-history >  .input-box {
+.data-history >  form > .input-box {
     display: flex;
     flex-direction: row;
     justify-content: center;
