@@ -124,6 +124,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    border: 1px solid #00897B;
+}
+
+.btn-primary:hover {
+    cursor: pointer;
 }
 
 .input-box {
@@ -133,7 +142,50 @@ body {
     gap: 13px;
     font-weight: 500;
     margin-bottom: 13px;
+    position: relative;
 }
+
+.input-box > button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 16px;
+    width: 16px;
+    background-color: unset;
+    border: unset;
+    z-index: 20;
+}
+
+#passwordHidden, #passwordConfirmHidden {
+    background-image: url('../img/password-hidden.png');
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+.input-box > button:active {
+    outline: unset;
+    border: none;
+}
+
+.input-box > button > img {
+    height: 16px;
+    width: 16px;
+}
+
+.input-box > button:hover {
+    cursor: pointer;
+}
+
+.input-box > img:last-child {
+    display: none;
+}
+
+#infoValidation {
+    padding: 20px;
+    color: red;
+}
+
+
 
 .form-input {
     width: 100%;
@@ -152,7 +204,7 @@ body {
     padding-left: 36px;
 }
 
-#password, #confirm-password {
+#password, #confirmPassword {
     background-image: url('../img/password.png');
     background-repeat: no-repeat;
     background-position: 10px center;
@@ -177,6 +229,10 @@ input::placeholder {
     font-weight: 400;
     font-size: 12px;
     letter-spacing: 0.75px;
+}
+
+#formRegister {
+    gap: 20px;
 }
 
 @media (max-width : 768px) {

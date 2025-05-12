@@ -30,30 +30,46 @@
                         sign in with facebook
                     </button>
                 </div>
+                <form action="" id="formRegister">
                 <div class="input-box">
                     <span class="input-register">email</span>
-                    <input class="form-input" type="email" name="email" id="email" placeholder="Enter Your Email">
+                    <input class="form-input" type="email" name="email" id="email" placeholder="Enter Your Email" autocomplete="off">
                 </div>
                 <div class="input-box">
                     <span class="input-register">password</span>
                     <input class="form-input" type="password" name="password" id="password" placeholder="Enter Your Password">
+                    <button type="button" id="passwordHidden">
+                        <!-- <img src="../img/password-hidden.png" alt="" >  -->
+                    </button>
+                    <!-- <button type="button" id="passwordOpen">
+                        <img src="../img/password-open.png" alt="">
+                    </button> -->
                 </div>
                 <div class="input-box">
                     <span class="input-register">confirm password</span>
-                    <input class="form-input" type="password" name="confirm-password" id="confirm-password" placeholder="Enter Your Password Again">
+                    <input class="form-input" type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter Your Password Again">
+                    <button type="button" id="passwordConfirmHidden">
+                         <!-- <img src="../img/password-hidden.png" alt="" >  -->
+                    </button>
+                    <!-- <button type="button"  id="passwordConfirmOpen">
+                        <img src="../img/password-open.png" alt="">
+                    </button> -->
                 </div>
                 <div class="button">
                     <button class="btn-primary" type="submit">register</button>
                 </div>
+                <span id="infoValidation"></span>
                 <div class="have-account">
-                    <span class="text-info">have an Account? <span class="span-login">Login</span></span>
+                    <span class="text-info">have an Account? <span class="span-login"><a href="login.html">Login</a></span></span>
                 </div>
-            </div>
+                </form>
+                </div>
         </div>
 
         <div class="layout-right">
             <img src="../img/wallet-large.png" alt="wallet-large">
         </div>
     </div>
+    <script src="../js/register.js"></script>
 </body>
 </html>
