@@ -118,7 +118,7 @@ main {
     flex-direction: row;
     /* justify-content: center; */
     /* align-items: center; */
-    background-color: var(--secondary2);
+    background-color: var(--secondary1);
     height: 100%;
     width: 100%;
 }
@@ -220,6 +220,7 @@ li a:hover {
     padding: 48px;
     padding-right: 86px;
     gap: 24px;
+    background-color: var(--secondary1);
 }
 
 .left-content {
@@ -344,6 +345,7 @@ li a:hover {
     align-items: center;
     background-color: var(--primary2);
     color: var(--secondary1);
+    cursor: pointer;
 }
 
 .service-button button img {
@@ -668,6 +670,10 @@ li a:hover {
 
     .right-content {
         padding: 0 40px;
+    }
+
+    #btn-transfer, #btn-topup {
+        cursor: pointer;
     }
 
     .service-button {
