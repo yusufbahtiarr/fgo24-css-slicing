@@ -247,20 +247,53 @@ li a:hover {
     align-items: center;
     width: 100%;
     padding: 20px 40px;
+    border: 1pxvar(--secondary2);
 }
 
 .title-history input {
-  background: url('../img/search.png') no-repeat calc(100% - 10px) center / 16px;
-  padding-right: 36px;
-  padding: 10px  20px;
-  border: none;
-  border-radius: 6px;
-  border: 1px solid var(--secondary2);
-  width: 340px;
-  height: 40px;
-  gap: 10px;
-  padding: 10px;
+    padding-right: 36px;
+    padding: 10px  20px;
+    border: none;
+    border-radius: 6px;
+    width: 340px;
+    height: 40px;
+    gap: 10px;
+    padding: 10px;
+    outline: unset;
 }
+
+.title-history input:focus{
+    background-color: unset;
+}
+
+
+.title-history > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: 1px solid var(--secondary2);
+    padding: 5px 10px;
+    border-radius: 6px;
+    gap: 10px;
+}
+
+.title-history button {
+    background-color: unset;
+    /* background-image: url('../img/search.png');
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center; */
+    border: none;
+    cursor: pointer;
+    /* height: 24px;
+    width: 24px; */
+    img {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+
 
 .list-history{
     display: flex;
@@ -331,6 +364,51 @@ li a:hover {
 
 .mobile {
     display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 12px;
+
+    tr {
+        td {
+            color: var(--fontgrey);
+            padding: 10px 20px;
+
+            
+            &:nth-last-child(1) {
+               /* padding-right: 0;  */
+               text-align: right;
+            }
+            &:nth-last-child(1) img {
+                height: 24px;
+                width: 24px;
+            }
+            &:nth-child(1) img {
+                height: 48px;
+                width: 48px;
+                border-radius: 6px;
+            }
+            &:nth-child(2) a, :nth-child(2) a:visited {
+                text-decoration: none;
+                color: var(--fontgrey);
+            }
+        }
+        &:nth-child(odd){
+            background-color: var(--secondary2);
+            td:nth-child(4){
+                color: var(--fontgreen);
+            }
+        }
+    
+        &:nth-child(even) {
+            background-color: var(--secondary1);
+            td:nth-child(4){
+                    color: var(--fontred);
+                }
+        }
+    }
 }
 
 @media (max-width: 768px) {
