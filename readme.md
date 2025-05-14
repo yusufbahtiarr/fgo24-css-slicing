@@ -2,6 +2,8 @@
 This project is related to the implementation of slicing with a total of 16 pages and with responsive pages. This project tends to document more HTML and CSS structures for further use.
 
 ## Preview
+Check out this project: [E-Wallet](https://yusufbahtiarr.github.io/fgo24-css-slicing/)  
+
 ![Preview](./img/image2.png)
 
 ## How to Run this project
