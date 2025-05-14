@@ -511,6 +511,16 @@ hr {
     display: none;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#infoTopup {
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     main {
         flex-direction: column-reverse;

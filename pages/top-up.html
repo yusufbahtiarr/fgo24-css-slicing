@@ -67,8 +67,8 @@
                       <div>
                         <img src="../img/Profile1.png" alt="find1">
                         <div>
-                          <span>Ghaluh 1</span>
-                          <span>(239) 555-0108</span>
+                          <span id="user-name">Ghaluh 1</span>
+                          <span id="user-phone">(239) 555-0108</span>
                           <div>
                           <img src="../img/verified.png" alt=""> 
                           <span>Verified</span>
@@ -81,40 +81,37 @@
                   <div class="data-history">
                     <span>Amount</span>
                     <p>Type the amount you want to transfer to your e-wallet account</p>
-                    <input class="btn-input" type="text" name="amount" placeholder="Enter Nominal Transfer">
+                    <input class="btn-input" type="number" name="amount" id="input-amount" placeholder="Enter Nominal Transfer" min="0" required>
                   </div>
                   <div class="data-history">
                     <span>Payment Method</span>
                     <p>Choose your payment method for top up account</p>
                     <div>
                       <label>
-                        <input type="radio" name="payment" id="bri" checked> <img src="../img/BRI.png" alt=""> Bank Rakyat Indonesia
+                        <input type="radio" name="payment" value="bri"> <img src="../img/BRI.png" alt=""> Bank Rakyat Indonesia
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="radio" name="payment" id="bri"> <img src="../img/Dana.png" alt=""> Dana
+                        <input type="radio" name="payment" value="dana"> <img src="../img/Dana.png" alt=""> Dana
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="radio" name="payment" id="bca"> <img src="../img/BCA.png" alt=""> Bank Central Asia
+                        <input type="radio" name="payment" value="bca"> <img src="../img/BCA.png" alt=""> Bank Central Asia
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="radio" name="payment" id="gopay"> <img src="../img/Gopay.png" alt=""> Gopay
+                        <input type="radio" name="payment" value="gopay"> <img src="../img/Gopay.png" alt=""> Gopay
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="radio" name="payment" id="ovo"> <img src="../img/ovo.png" alt=""> OVO
+                        <input type="radio" name="payment" value="ovo"> <img src="../img/ovo.png" alt=""> OVO
                       </label>
                     </div>
                   </div>
-                  <!-- <div class="data-history">
-                  <button class="image-mobile">Submit & Transfer</button>
-                  </div> -->
                 </div>
                 <div class="content-right">
                   <div>
@@ -123,35 +120,31 @@
                   <div>
                     <div>
                       <span>Order</span>
-                      <span>Idr. 40.000</span>
+                      <span id="order-amount">Idr. 0</span>
                     </div>
                     <div>
                       <span>Delivery</span>
-                      <span>Idr. 0</span>
+                      <span id="delivery">Idr. 0</span>
                     </div>
                     <div>
-                      <span>Tax</span>
-                      <span>Idr. 4000</span>
+                      <span>Tax (10%)</span>
+                      <span id="tax-amount">Idr. 0</span>
                     </div>
                     <hr>
                     <div>
                       <span>Sub Total</span>
-                      <span>Idr.44.000</span>
+                      <span id="sub-total">Idr. 0</span>
                     </div>
-                    <button>Submit</button>
+                    <button type="button" id="btnTopup">Submit</button>
                     <p>*Get Discount if you pay with Bank Central Asia</p>
                   </div>
+                  <span id="infoTopup"></span>
                 </div>
               </div>
             </section>
         </main>
     </div>
-    <script>
-      const user = localStorage.getItem('currentUser')
-
-      if (!user) {
-        window.location.href = '../index.html'
-      }
+    <script src="../js/topup.js">
     </script>
 </body>
 </html>
