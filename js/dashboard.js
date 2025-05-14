@@ -1,6 +1,12 @@
 const btnTransfer = document.getElementById('btn-transfer')
 const btnTopup = document.getElementById('btn-topup')
 
+const user = localStorage.getItem('currentUser')
+
+if (!user) {
+  window.location.href = '../index.html'
+}
+
 btnTopup.addEventListener('click', function () {
     window.location.href = 'top-up.html';
 });
@@ -8,49 +14,71 @@ btnTransfer.addEventListener('click', function () {
     window.location.href = 'transfer.html';
 });
 
-const image = document.querySelectorAll('.transaction-image > img')
-const name = document.querySelectorAll('.transaction-name > span:first-child')
-
 let dataHistory = []
-// console.log(image[1]);
-// console.log(name[1]);
 
-//Fetch Data
+const boxRight = document.querySelector('.box-right-down')
 
-function fetchData() {
-  fetch('https://randomuser.me/api/?results=20') // ambil 20 user acak
-    .then(response => response.json())
-    .then(data => {
-      const simplifiedUsers = data.results.map(user => ({
-        name: `${user.name.first} ${user.name.last}`,
-        phone: user.phone,
-        image: user.picture.large
-      }))
+async function loadData() {
+  try {
+    const response = await fetch('../history.json');
+    const data = await response.json();
+    dataTransfer = data;
 
-      dataHistory = simplifiedUsers
-      // console.log(simplifiedUsers);
-
-        // Tampilkan data ke elemen
-      dataHistory.forEach((item, index) => {
-        if (image[index] && name[index]) {
-          image[index].src = item.image;
-          name[index].textContent = item.name;
-
-          // console.log(item.name, item.image);
-        }
-      });
-    })
-    .catch(error => {
-      console.error('Fetch error:', error);
-  })
+    // Sekarang kamu bisa menggunakan dataTransfer
+    console.log(dataTransfer);
+    
+    for(let i = 0; i < 9; i++){
+      const div = document.createElement('div')
+      const div2 = document.createElement('div')
+      const div3 = document.createElement('div')
+      const transaction = document.createElement('div')
+      const img = document.createElement('img')
+      const img2 = document.createElement('img')
+      const span = document.createElement('span')
+      const span2 = document.createElement('span')
+      const span3 = document.createElement('span')
+      console.log(dataTransfer[i].name);
+      console.log(dataTransfer[i].image);
+      console.log(dataTransfer[i].typeTransaction);
+      boxRight.append(transaction)
+      transaction.classList.add('transaction')
+      transaction.append(div)
+      div.classList.add('transaction-image')
+      div.append(img)
+      img.src = dataTransfer[i].image
+      img.style.height = '48px'
+      img.style.width = '48px'
+      img.style.borderRadius = '6px'
+      transaction.append(div2)
+      div2.classList.add('transaction-name')
+      div2.append(span)
+      div2.append(span2)
+      span.textContent = dataTransfer[i].name
+      span2.textContent = dataTransfer[i].typeTransaction
+      
+      transaction.append(div3)
+      div3.classList.add('transaction-amount')
+      div3.append(span3)
+      if (dataTransfer[i].typeTransaction === "Transfer" ){
+        span3.style.color = 'green'
+        span3.textContent = `+Rp. ${dataTransfer[i].amount.toLocaleString('id')}`
+      }else{
+        span3.style.color = 'red'
+        span3.textContent = `-Rp. ${dataTransfer[i].amount.toLocaleString('id')}`
+      }
+    }
+  } catch (error) {
+    console.error("Gagal memuat file JSON:", error);
+  }
 }
-fetchData()
+loadData();
 
-dataHistory.forEach((item, index) =>{
-  image[index].src = item.image
-  name[index].textContent = item.name
-  console.log(image[index]);
-  console.log(name[index]);
-  console.log(item.name);
-  console.log(item.image);
-})
+function signOut() {
+  localStorage.removeItem('currentUser')
+  window.location.href = '../index.html'
+}
+
+
+
+// [{"email":"bahtiar@gmail.com","password":"123","pin":"345456"}]
+

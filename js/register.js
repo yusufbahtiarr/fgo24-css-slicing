@@ -40,6 +40,15 @@ formRegister.addEventListener('submit', function(e) {
   const password = e.target.password.value
   const confirmPassword = e.target.confirmPassword.value
 
+  const dataUser = JSON.parse(localStorage.getItem('dataUser')) || []
+  console.log(dataUser);
+  
+  if (email && dataUser.some(user => user.email?.toLowerCase() === email.toLowerCase())){
+      spanInfo.textContent = "Email sudah terdaftar!";
+      clearInfoValidation()
+      return;
+   } 
+
   if(password !== confirmPassword){
     spanInfo.textContent = "Password tidak sama. Silahkan ulangi lagi";
     clearInfoValidation()
@@ -51,7 +60,7 @@ formRegister.addEventListener('submit', function(e) {
     })
   
     localStorage.setItem('registerData', JSON.stringify(register))
-    window.location.href = '../pages/enter-pin.html'
+    // window.location.href = '../pages/enter-pin.html'
   }
 
 })

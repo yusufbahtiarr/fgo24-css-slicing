@@ -5,7 +5,7 @@ const info = document.getElementById('information')
 
 // console.log(registerData);
 
-if (cekData.length == "") {
+if (!cekData) {
   window.location.href = 'register.html';
 }
 
@@ -25,23 +25,19 @@ formPin.addEventListener('submit', function(e) {
     
     const latestUser = registerData[registerData.length - 1];
     let dataUser = JSON.parse(localStorage.getItem('dataUser')) || []
-
-    dataUser.push(latestUser)
-
+    if (dataUser.filter(user => user.email === latestUser.email).length){
+      console.log('Data Email Sudah Ada');
+    }else{
+      dataUser.push(latestUser)
+    }  
+    
     localStorage.setItem('dataUser', JSON.stringify(dataUser));
     localStorage.removeItem('registerData')
     console.log(dataUser);
 
-    info.textContent = 'Registrasi berhasil! Anda akan diarahkan ke halaman utama dalam 3 detik.';
-
-    setTimeout(() => {
-      window.location.href = '../index.html';
-    }, 3000);    
+    info.textContent = 'Registrasi berhasil!';
+    window.location.href = 'login.html';
+ 
   } 
   }
 )
-
-// [{"email":"aaa@aaaa","password":"123","pin":"257890"},
-// {"email":"bbb@aaaa","password":"444","pin":"978978"},
-// [{"email":"asdad@asdasd","password":"1234","pin":"256867"}],
-// {"email":"asdas@sdfsdf","password":"1231","pin":"225676"}]

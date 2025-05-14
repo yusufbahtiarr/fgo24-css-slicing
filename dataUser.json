@@ -1,0 +1,37 @@
+[
+  {
+    "email": "yusuf@gmail.com",
+    "password": "111",
+    "pin" : "111111",
+    "name": "Yusuf Bahtiar",
+    "phone": "08987465747"
+  },
+  {
+    "email": "Hansen@gmail.com",
+    "password": "222",
+    "pin" : "222222",
+    "name": "Hansen Tam",
+    "phone": "08785465747"
+  },
+  {
+    "email": "John@gmail.com",
+    "password": "333",
+    "pin" : "333333",
+    "name": "John Hann",
+    "phone": "083236765747"
+  },
+  {
+    "email": "Goansa@gmail.com",
+    "password": "444",
+    "pin" : "444444",
+    "name": "Goansa Fulk",
+    "phone": "083567687747"
+  },
+  {
+    "email": "Banru@gmail.com",
+    "password": "555",
+    "pin" : "555555",
+    "name": "Banru Gin",
+    "phone": "08345877643"
+  }
+]

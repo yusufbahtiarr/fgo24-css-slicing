@@ -24,30 +24,30 @@
                 <div class="menu">
                     <ul>
                         <li>
-                            <a href="#"><img src="../img/dashboard.png" alt="dashboard">dashboard</a>
+                            <a href="dashboard.html"><img src="../img/dashboard.png" alt="dashboard">dashboard</a>
                         </li>
                         <li>
-                          <a href="#">
+                          <a href="transfer.html">
                           <!-- <img src="../img/transfer-white.24.png" alt="dashboard" class="image-desktop"> -->
                           <img src="../img/transfer-24.png" alt="dashboard">
                               transfer</a>
                       </li>
                       <li>
-                          <a href="#">
+                          <a href="history-transaction.html">
                           <img src="../img/history.png" alt="dashboard">
                           history</a>
                       </li>
 
-                        <li>
-                            <a href="#">
+                        <li  class="main-menu">
+                            <a href="top-up.html">
                             <img src="../img/topup-24.png" alt="dashboard">top up</a></li>
-                        <li class="main-menu">
-                            <a href="#">
-                            <img src="../img/profile-24.png" alt="dashboard" class="image-desktop">
-                            <img src="../img/profile-blue.png" alt="dashboard" class="image-mobile">
+                        <li>
+                            <a href="edit-profile.html">
+                            <img src="../img/profile-24.png" alt="dashboard">
+                            <!-- <img src="../img/profile-blue.png" alt="dashboard" class="image-mobile"> -->
                             profile</a></li>
                         <li>
-                            <a href="#">
+                            <a href="../index.html">
                             <img src="../img/keluar-24.png" alt="dashboard">keluar</a></li>
                     </ul>
                 </div>
@@ -88,33 +88,33 @@
                     <p>Choose your payment method for top up account</p>
                     <div>
                       <label>
-                        <input type="radio" name="bri" id="bri" checked> <img src="../img/BRI.png" alt=""> Bank Rakyat Indonesia
+                        <input type="radio" name="payment" id="bri" checked> <img src="../img/BRI.png" alt=""> Bank Rakyat Indonesia
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="radio" name="bri" id="bri"> <img src="../img/Dana.png" alt=""> Dana
+                        <input type="radio" name="payment" id="bri"> <img src="../img/Dana.png" alt=""> Dana
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="radio" name="bca" id="bca"> <img src="../img/BCA.png" alt=""> Bank Central Asia
+                        <input type="radio" name="payment" id="bca"> <img src="../img/BCA.png" alt=""> Bank Central Asia
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="radio" name="gopay" id="gopay"> <img src="../img/Gopay.png" alt=""> Gopay
+                        <input type="radio" name="payment" id="gopay"> <img src="../img/Gopay.png" alt=""> Gopay
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="radio" name="ovo" id="ovo"> <img src="../img/ovo.png" alt=""> OVO
+                        <input type="radio" name="payment" id="ovo"> <img src="../img/ovo.png" alt=""> OVO
                       </label>
                     </div>
                   </div>
-                  <div class="data-history">
+                  <!-- <div class="data-history">
                   <button class="image-mobile">Submit & Transfer</button>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="content-right">
                   <div>
@@ -146,5 +146,12 @@
             </section>
         </main>
     </div>
+    <script>
+      const user = localStorage.getItem('currentUser')
+
+      if (!user) {
+        window.location.href = '../index.html'
+      }
+    </script>
 </body>
 </html>

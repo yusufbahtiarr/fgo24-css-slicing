@@ -6,11 +6,7 @@
 #FBF8EF  seconddary
 #FFB433  optional
 
-Rekomendasi warna lebih tua dari #80CBC4:
-#4DB6AC – Versi satu tingkat lebih tua, masih lembut.
-#26A69A – Lebih gelap lagi, dengan kesan lebih kuat.
-#00897B – Jauh lebih tua, mendekati warna teal gelap.
-#00695C – Sangat gelap, cocok untuk aksen atau latar belakang kontras tinggi.
+
 */
 
 
@@ -50,6 +46,9 @@ body {
 .layout-register img {
     height: 32px;
     width: 32px;
+}
+input {
+    outline: unset;
 }
 
 .layout-right {
@@ -218,6 +217,10 @@ body {
 
 .have-account {
     text-align: center;
+}
+
+.have-account  span  a {
+    text-decoration: none;
 }
 
 .span-login {

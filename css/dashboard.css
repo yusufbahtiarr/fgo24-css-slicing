@@ -459,6 +459,10 @@ li a:hover {
     width: 100%;
 }
 
+.box-right-up > span > a {
+    text-decoration: none;
+}
+
 .transaction-history {
     font-size: 18px;
     font-weight: 600;
@@ -498,7 +502,7 @@ li a:hover {
     justify-content: space-between;
     align-items: flex-start;
     text-align: left;
-    width: 100px;
+    width: 170px;
     font-size: 16px;
     gap: 10px;
     /* border: 1px solid var(--secondary2); */

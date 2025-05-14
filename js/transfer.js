@@ -5,6 +5,12 @@ const name = document.querySelector('.list-history > div > span:nth-of-type(1)')
 const telephone = document.querySelector('.list-history > div > span:nth-of-type(2)')
 const star = document.querySelector('.list-history > div > img:last-child')
 
+const user = localStorage.getItem('currentUser')
+
+if (!user) {
+  window.location.href = '../index.html'
+}
+
 async function loadData() {
   try {
     const response = await fetch('../history.json');

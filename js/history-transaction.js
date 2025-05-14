@@ -1,5 +1,11 @@
 const table = document.querySelector('table')
 
+const user = localStorage.getItem('currentUser')
+
+if (!user) {
+  window.location.href = '../index.html'
+}
+
 let dataTransaction = []
 
 // Fetch Data
@@ -49,9 +55,6 @@ function loadData(data){
     }
   }
   
-  console.log(dataTransaction);
-  console.log('dataTransaction');
-  
   // Pencarian Data
   const search = document.getElementById('searchInput')
   const btnSearch = document.getElementById('btnSearch')
@@ -66,12 +69,16 @@ function loadData(data){
         item.name.toLowerCase().includes(input) ||
         item.phone.toLowerCase().includes(input)
       )
-      filteredData.forEach(item => {
-        console.log(item.name, item.phone);
-      })
-      loadData(filteredData)
+      if(filteredData.length === 0){
+        table.innerHTML = ''
+        table.append(document.createElement('span').textContent = "Data Pencarian tidak ditemukan")
+      }else{
+        loadData(filteredData)
+      }
+
     } else {
       imgSearch.src = '../img/search.png';
+      search.value= ""
       loadData(dataTransaction)
     }
     

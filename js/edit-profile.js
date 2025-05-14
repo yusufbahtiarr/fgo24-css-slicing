@@ -1,14 +1,23 @@
 const formProfile = document.getElementById('formEditProfile')
 const email = document.querySelector('.btn-input:nth-of-type(3)')
 const spanInfo = document.getElementById('infoValidation')
+const fullname = document.getElementById('name')
+const telephone = document.getElementById('telephone')
 
 const dataUser = JSON.parse(localStorage.getItem('dataUser'))
 const currentUser = JSON.parse(localStorage.getItem('currentUser'))
 
+const user = localStorage.getItem('currentUser')
+
+if (!user) {
+  window.location.href = '../index.html'
+}
 
 const emailUser = currentUser.email
 const userIndex = dataUser.findIndex(user => user.email === emailUser)
-email.value = currentUser.email
+email.value = emailUser
+currentUser.name ? fullname.value = currentUser.name : ""
+currentUser.telephone ? telephone.value = currentUser.telephone : ""
 
 
 formProfile.addEventListener('submit', function(e) {

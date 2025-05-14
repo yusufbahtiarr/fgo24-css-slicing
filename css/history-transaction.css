@@ -6,11 +6,6 @@
 #FBF8EF  seconddary
 #FFB433  optional
 
-Rekomendasi warna lebih tua dari #80CBC4:
-#4DB6AC – Versi satu tingkat lebih tua, masih lembut.
-#26A69A – Lebih gelap lagi, dengan kesan lebih kuat.
-#00897B – Jauh lebih tua, mendekati warna teal gelap.
-#00695C – Sangat gelap, cocok untuk aksen atau latar belakang kontras tinggi.
 */
 :root {
     --primary1: #80CBC4;
@@ -42,6 +37,8 @@ body {
     text-transform: capitalize;
 }
 
+
+
 .container {
     position: relative;
     display: flex;
@@ -59,7 +56,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--secondary2);
-    padding-left: 40px;
+    padding: 20px 40px;
     padding-right: 80px;
     gap: 10px;
 }
@@ -255,11 +252,19 @@ li a:hover {
     padding: 10px  20px;
     border: none;
     border-radius: 6px;
-    width: 340px;
+    width: 100%;
     height: 40px;
     gap: 10px;
     padding: 10px;
     outline: unset;
+}
+
+table > tr > td:first-child, table > tr > td:last-child{
+    display: none;
+}
+
+table > tr > td {       
+    height: 80px;
 }
 
 .title-history input:focus{
@@ -411,167 +416,185 @@ table {
     }
 }
 
-@media (max-width: 768px) {
-    main {
-        flex-direction: column-reverse;
-    }
+    @media (max-width: 768px) {
+        .container {
+            height: fit-content;
+            min-height: 100%;
+        }
+        main {
+            flex-direction: column;
+            min-height: 100vh;
+            height: 100%;
+        }
 
-    .content {
-        padding-right: 30px;
-    }
+        .content {
+            padding-right: 30px;
+            height: auto;
+            min-height: 100%;
+            position: relative;
+        }
 
-   
-    aside {
-        /* position: fixed; */
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        height: 100px;
-        margin: 0 auto;
-        /* width: 100%; */
-        background-color: #fff; /* atau warna sesuai tema */
-        border-top: 1px solid #ccc;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding: 0;
-        z-index: 999;
-    }
-    .menu, .menu > ul, .menu > ul > li {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 0;  
-        margin: 0;  
-        width: 100%;
-        box-sizing: border-box;    
-    }
+        aside {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            bottom: 0;
+            background-color: #fff; 
+            border-top: 1px solid #ccc;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 0;
+            z-index: 20;
+            order: 2;
+        }
+        .menu, .menu > ul, .menu > ul > li {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0;  
+            margin: 0;  
+            width: 100%;
+            box-sizing: border-box;    
+        }
 
-    .menu > ul {
-        padding: 0;
-        margin: 0;
-        gap: 0;
-        height: 100%;
-    }
+        .menu > ul {
+            padding: 0;
+            margin: 0;
+            gap: 0;
+            height: 100%;
+        }
 
-    .menu > ul > li {
-        /* flex: 1; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        height: 100%;
-    }
+        .menu > ul > li {
+            /* flex: 1; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            height: 100%;
+        }
 
-    .main-menu > a {
-        background-color: var(--secondary1);
-        color: var(--primary2);
-    }
+        .main-menu > a {
+            background-color: var(--secondary1);
+            color: var(--primary2);
+        }
 
-    .menu > ul > li a {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        height: 100%;
-    }
+        .menu > ul > li a {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            height: 100%;
+        }
 
-    .menu > ul > li > img {
-        /* flex: 1; */
-        display: flex;
-        flex-direction: row;
-    }
+        .menu > ul > li > img {
+            /* flex: 1; */
+            display: flex;
+            flex-direction: row;
+        }
 
 
-    .menu > ul > li:last-child {
-        display: none;
-    }
-    header {
-        display: none;
-    }
-    li > a > .image-mobile {
-        display: flex;
-    }
-    li > a > .image-desktop {
-        display: none;
-    }
+        .menu > ul > li:last-child {
+            display: none;
+        }
+        header {
+            display: none;
+        }
+        li > a > .image-mobile {
+            display: flex;
+        }
+        li > a > .image-desktop {
+            display: none;
+        }
 
-    .data-history > span {
-        /* gap: 40px; */
-        font-size: 14px;
-        font-weight: 500;
-        /* margin-bottom: 20px; */
-    }
-    .content  {
-        padding: 0;
-        gap: 0;
-    }
-    .content-up {
-        padding: 20px 40px;
-        background-color: var(--primary2);
-        color: var(--secondary1);
-        
-    }
-    .content-up > img {
-        display: none;
-    }
+        .data-history > span {
+            /* gap: 40px; */
+            font-size: 14px;
+            font-weight: 500;
+            /* margin-bottom: 20px; */
+        }
+        .content  {
+            /* position: relative; */
+            padding: 0;
+            gap: 0;
+            min-height: 895px;
+            overflow-y: hidden;
+            /* height: auto; */
+        }
+        .content-up {
+            position: relative;
+            height: auto;
+            min-height: 64px;
+            padding: 20px 40px;
+            margin-bottom: 20px;
+            background-color: var(--primary2);
+            color: var(--secondary1);
+            order: 1;
+            
+        }
+        .content-up > img {
+            display: none;
+        }
 
-    .content-up > span {
-        font-family: Montserrat;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 24px;
-        letter-spacing: -0.6%;
-        padding: 0;
-    }
+        .content-up > span {
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: -0.6%;
+            padding: 0;
+        }
 
-    .content-up-2 {
-        display: none;
-    }
-    .content-down {
-        border: none;
-        gap: 0;
-        padding: 10px 20px;
-    }
+        .content-up-2 {
+            display: none;
+        }
+        .content-down {
+            height: auto;
+            /* min-height: 795px; */
+            border: none;
+            gap: 0;
+            padding: 10px 20px;
+            order: 2;
+        }
 
-    .data-history {
-        padding-bottom: 20px;
-        gap: 15px;
+        .data-history {
+            padding-bottom: 20px;
+            gap: 15px;
+
+        }
+        .list-history > div {
+            border-radius: 8px;
+            padding: 16px;
+            /* gap: 40px; */
+            color: var(--fontgrey);
+            border-radius: 0;
+        }
+
+        .title-history, .list-history {
+            padding: 20px;
+        }
+        .title-history {
+            padding-bottom: 0;
+        }
+        .mobile {
+            display: flex;
+        }
+        .desktop {
+            display: none;
+        }
+
+        .list-history > div > img:first-child, .list-history > div > img:last-child {
+            display: none;
+        }
+
+        .list-history > div > div {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            
+        }
 
     }
-    .list-history > div {
-        border-radius: 8px;
-        padding: 16px;
-        /* gap: 40px; */
-        color: var(--fontgrey);
-        border-radius: 0;
-    }
-
-    .title-history, .list-history {
-        padding: 20px;
-    }
-    .title-history {
-        padding-bottom: 0;
-    }
-    .mobile {
-        display: flex;
-    }
-    .desktop {
-        display: none;
-    }
-
-    .list-history > div > img:first-child, .list-history > div > img:last-child {
-        display: none;
-    }
-
-    .list-history > div > div {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        
-    }
-
-}
 
 
 
