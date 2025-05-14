@@ -502,10 +502,6 @@ li a:hover {
         flex-direction: row;
     }
 
-
-    .menu > ul > li:last-child {
-        display: none;
-    }
     header {
         display: none;
     }

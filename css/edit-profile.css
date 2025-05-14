@@ -446,6 +446,12 @@ input, button {
     font-size: 14px;
 } 
 
+.data-history > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .data-history > div > div {
     display: flex;
     flex-direction: row;
@@ -598,10 +604,6 @@ input, button {
         flex-direction: row;
     }
 
-
-    .menu > ul > li:last-child {
-        display: none;
-    }
     header {
         display: none;
     }
