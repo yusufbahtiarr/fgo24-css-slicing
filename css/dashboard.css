@@ -1,30 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-/* 
-#80CBC4  primary
-#B4EBE6  primary 2
-#FBF8EF  seconddary
-#FFB433  optional
+@import url('header.css');
 
-Rekomendasi warna lebih tua dari #80CBC4:
-#4DB6AC – Versi satu tingkat lebih tua, masih lembut.
-#26A69A – Lebih gelap lagi, dengan kesan lebih kuat.
-#00897B – Jauh lebih tua, mendekati warna teal gelap.
-#00695C – Sangat gelap, cocok untuk aksen atau latar belakang kontras tinggi.
-*/
-:root {
-    --primary1: #80CBC4;
-    --primary2: #00897B;
-    --secondary1: #FFFFFF;
-    --secondary2: #E8E8E8;
-    --third: #00695C;
-    --fontblack: #0B132A;
-    --fontgrey: #4F5665;
-    --fontwhite: #FFFFFF;
-    --fontgreen: #00A700;
-    --fontred: #D00000;
-
-    }
 
 * {
     box-sizing: border-box;
@@ -39,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #80CBC4;
+    background-color: var(--primary1);
     text-transform: capitalize;
 }
 
@@ -48,69 +25,10 @@ body {
     display: flex;
     width: 100vw;
     height: 100vh;
-    /* background-color: blue; */
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
 }
-
-header {
-    position: relative;
-    background-color: var(--secondary1);
-    width: 100%;
-    height: 780px !important;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--secondary2);
-    padding-left: 40px;
-    padding-right: 80px;
-    gap: 10px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: Nunito Sans;
-    font-weight: 600;
-    font-size: 20px;
-    color: var(--primary2);
-}
-
-.logo img {
-    height: 32px;
-    width: 32px;
-}
-
-.user {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.user #user-account {
-    line-height: 24px;
-    letter-spacing: -0.6%;
-}
-
-.user img {
-    width: 48px;
-    height: 48px;
-}
-
-.user button {
-    background-color: transparent;
-    background-image: url('../img/user-down-24.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 24px;
-    height: 24px;
-    width: 24px;
-    border: none;
-}
-
 
 main {
     position: relative;
@@ -542,13 +460,8 @@ li a:hover {
     display: none;
 }
 @media (max-width: 768px){
-    header {
-        background-color: var(--primary2);
-        padding: 20px 40px;
-        height: 100px;
-        position: relative;
-    }
-    .logo, .btn-user, .service-name, .menu > ul > li:nth-child(6) {
+    
+    .logo, .btn-user, .service-name{
         display: none;
     }
     .user {
@@ -665,10 +578,6 @@ li a:hover {
     }
 
     .box-finance > div:first-child > img {
-        display: none;
-    }
-
-    .card-finance:nth-child(1) > .box-finance > div:last-child > span, .card-finance:nth-child(1) > .box-finance > div:last-child > img {
         display: none;
     }
 

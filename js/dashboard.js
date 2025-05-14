@@ -1,7 +1,9 @@
 const btnTransfer = document.getElementById('btn-transfer')
 const btnTopup = document.getElementById('btn-topup')
+const username = document.getElementById('user-account')
 
-const user = localStorage.getItem('currentUser')
+const user = JSON.parse(localStorage.getItem('currentUser'))
+// username.textContent = user?.name || user?.email?.split('@')[0] 
 
 if (!user) {
   window.location.href = '../index.html'
