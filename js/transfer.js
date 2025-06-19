@@ -1,51 +1,86 @@
-const listHistory = document.querySelector('.list-history')
-const divList = document.querySelector('.list-history > div')
-const image = document.querySelector('.list-history > div > img:first-child')
-const name = document.querySelector('.list-history > div > span:nth-of-type(1)')
-const telephone = document.querySelector('.list-history > div > span:nth-of-type(2)')
-const star = document.querySelector('.list-history > div > img:last-child')
-
-const user = localStorage.getItem('currentUser')
-
-if (!user) {
-  window.location.href = '../index.html'
-}
-
-async function loadData() {
-  try {
-    const response = await fetch('../history.json');
-    const data = await response.json();
-    dataTransfer = data;
-
-    // Sekarang kamu bisa menggunakan dataTransfer
-    console.log(dataTransfer);
-    
-    for(let i = 0; i < 9; i++){
-      const div = document.createElement('div')
-      const img = document.createElement('img')
-      const img2 = document.createElement('img')
-      const span = document.createElement('span')
-      const span2 = document.createElement('span')
-      console.log(dataTransfer[i].name);
-      listHistory.append(div)
-      div.append(img)
-      div.append(span)
-      div.append(span2)
-      div.append(img2)
-      img.src = dataTransfer[i].image
-      img.style.height = '48px'
-      img.style.width = '48px'
-      img.style.borderRadius = '6px'
-      span.textContent = dataTransfer[i].name
-      span2.textContent = dataTransfer[i].phone
-      img2.src = '../img/star.png'
-
-    }
-  } catch (error) {
-    console.error("Gagal memuat file JSON:", error);
+// transfer.js
+document.addEventListener("DOMContentLoaded", function () {
+  // Cek user login
+  const user = localStorage.getItem("currentUser");
+  if (!user) {
+    window.location.href = "../index.html";
+    return;
   }
-}
 
-loadData();
+  // Elemen DOM
+  const listHistory = document.querySelector(".list-history");
+  const searchInput = document.querySelector(
+    '.title-history input[name="find"]'
+  );
+  let dataTransfer = [];
 
+  // Load data dari JSON
+  async function loadData() {
+    try {
+      const response = await fetch("../history.json");
+      const data = await response.json();
+      dataTransfer = data;
+      renderData(data);
+    } catch (error) {
+      console.error("Gagal memuat file JSON:", error);
+    }
+  }
 
+  // Render data dengan filter
+  function renderData(dataToRender) {
+    listHistory.innerHTML = "";
+
+    // Ambil nilai pencarian
+    const searchQuery = searchInput.value.trim().toLowerCase();
+
+    // Filter data
+    const filteredData = searchQuery
+      ? dataToRender.filter(
+          (item) =>
+            item.name.toLowerCase().includes(searchQuery) ||
+            item.phone.includes(searchQuery)
+        )
+      : dataToRender;
+
+    // Tampilkan pesan jika tidak ada hasil
+    if (filteredData.length === 0) {
+      const noResults = document.createElement("div");
+      noResults.className = "no-results";
+      noResults.textContent = "No results found";
+      listHistory.appendChild(noResults);
+      return;
+    }
+
+    // Render setiap item
+    filteredData.forEach((item) => {
+      const historyItem = document.createElement("div");
+      historyItem.className = "history-item";
+      historyItem.innerHTML = `
+        <img src="${item.image}" alt="${item.name}" class="history-avatar">
+        <div class="history-info">
+          <span class="history-name">${item.name}</span>
+          <span class="history-phone">${item.phone}</span>
+        </div>
+        <img src="../img/star.png" alt="Star" class="history-star">
+      `;
+
+      // Tambahkan event listener untuk memilih penerima transfer
+      historyItem.addEventListener("click", function () {
+        // Simpan penerima transfer ke localStorage
+        localStorage.setItem("transferRecipient", JSON.stringify(item));
+        // Redirect ke halaman set nominal
+        window.location.href = "transfer-amount.html";
+      });
+
+      listHistory.appendChild(historyItem);
+    });
+  }
+
+  // Event listener untuk input pencarian
+  searchInput.addEventListener("input", function () {
+    renderData(dataTransfer);
+  });
+
+  // Inisialisasi
+  loadData();
+});

@@ -24,7 +24,7 @@ const subtotalSpan = document.getElementById("sub-total");
 const spanInfo = document.getElementById("infoTopup")
 
 let orderAmount = 0;
-let deliveryAmount = 0; // default
+let deliveryAmount = 0;
 let taxAmount = 0;
 
 function formatCurrency(num) {
@@ -33,7 +33,7 @@ function formatCurrency(num) {
 
 function updateOrder(value) {
   orderAmount = parseInt(value) || 0;
-  taxAmount = Math.floor(orderAmount * 0.1); // 10% tax
+  taxAmount = Math.floor(orderAmount * 0.1); 
   orderSpan.textContent = formatCurrency(orderAmount);
   taxSpan.textContent = formatCurrency(taxAmount);
   updateSubtotal();
